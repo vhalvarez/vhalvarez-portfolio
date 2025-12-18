@@ -1,0 +1,40 @@
+# robots.txt for vhalvarez.com
+# Generated: 2025-12-18
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Crawl-delay for polite bots
+Crawl-delay: 0.5
+
+# Disallow admin paths (if any in future)
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /_next/image
+
+# Sitemaps
+Sitemap: https://vhalvarez.com/sitemap.xml
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
