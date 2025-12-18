@@ -23,7 +23,7 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
 }: {
-  items: ({ title: string; icon: React.ReactNode; href: string; onClick?: () => void } | { separator: true })[];
+  items: ({ title: string; icon: React.ReactNode; href: string; onClick?: React.MouseEventHandler<HTMLAnchorElement> } | { separator: true })[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
@@ -39,7 +39,7 @@ const FloatingDockMobile = ({
   items,
   className,
 }: {
-  items: ({ title: string; icon: React.ReactNode; href: string; onClick?: () => void } | { separator: true })[];
+  items: ({ title: string; icon: React.ReactNode; href: string; onClick?: React.MouseEventHandler<HTMLAnchorElement> } | { separator: true })[];
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
@@ -114,7 +114,7 @@ const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: ({ title: string; icon: React.ReactNode; href: string; onClick?: () => void } | { separator: true })[];
+  items: ({ title: string; icon: React.ReactNode; href: string; onClick?: React.MouseEventHandler<HTMLAnchorElement> } | { separator: true })[];
   className?: string;
 }) => {
   const mouseX = useMotionValue(Infinity);
@@ -150,7 +150,7 @@ function IconContainer({
   title: string;
   icon: React.ReactNode;
   href: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 

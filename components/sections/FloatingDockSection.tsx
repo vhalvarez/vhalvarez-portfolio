@@ -52,7 +52,10 @@ export function FloatingDockSection() {
                 />
               ),
               href: "#",
-              onClick: () => setLang(lang === "en" ? "es" : "en"),
+              onClick: (e) => {
+                e.preventDefault();
+                setLang(lang === "en" ? "es" : "en");
+              },
             },
             {
               title: resolvedTheme === "dark" ? t("theme.light") : t("theme.dark"),
@@ -60,7 +63,10 @@ export function FloatingDockSection() {
                 ? <Sun className="size-full text-neutral-500 dark:text-neutral-300" />
                 : <Moon className="size-full text-neutral-500 dark:text-neutral-300" />,
               href: "#",
-              onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
+              onClick: (e) => {
+                e.preventDefault();
+                setTheme(resolvedTheme === "dark" ? "light" : "dark");
+              },
             }
           ]}
         />
