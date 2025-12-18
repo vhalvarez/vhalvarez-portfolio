@@ -1,12 +1,13 @@
 import { Network, Layers, Boxes } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 interface IconAdapter {
   render(): React.ReactNode;
 }
 
 class LucideIconAdapter implements IconAdapter {
-  constructor(private Icon: React.ComponentType<{ className?: string }>) {}
+  constructor(private Icon: React.ComponentType<{ className?: string }>) { }
 
   render() {
     return <this.Icon className="size-6" />;
@@ -14,13 +15,15 @@ class LucideIconAdapter implements IconAdapter {
 }
 
 class LocalImageIconAdapter implements IconAdapter {
-  constructor(private path: string, private alt: string) {}
+  constructor(private path: string, private alt: string) { }
 
   render() {
     return (
-      <img
+      <Image
         src={this.path}
         alt={this.alt}
+        width={24}
+        height={24}
         className="size-6 brightness-0 dark:invert"
       />
     );
@@ -28,13 +31,16 @@ class LocalImageIconAdapter implements IconAdapter {
 }
 
 class SimpleIconAdapter implements IconAdapter {
-  constructor(private slug: string, private alt: string) {}
+  constructor(private slug: string, private alt: string) { }
 
   render() {
     return (
-      <img
+      <Image
         src={`https://cdn.simpleicons.org/${this.slug}/000000`}
         alt={this.alt}
+        width={24}
+        height={24}
+        unoptimized
         className="size-6 dark:invert"
       />
     );

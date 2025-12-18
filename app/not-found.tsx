@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import BlurFade from "@/components/ui/blur-fade";
@@ -13,11 +14,13 @@ export default function NotFound() {
                     4
                 </span>
                 <div className="relative size-32 sm:size-40 rounded-full overflow-hidden border-4 border-muted shadow-xl">
-                    <img
+                    <Image
                         src="/avatar/avatar-404.webp"
                         alt="0"
-                        className="size-full object-cover"
+                        fill
+                        className="object-cover"
                     />
+
                 </div>
                 <span className="text-[10rem] sm:text-[12rem] font-bold tracking-tighter leading-none select-none">
                     4

@@ -1,5 +1,6 @@
 "use client";
 import { FloatingDock } from "@/components/ui/floating-dock";
+import Image from "next/image";
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -41,10 +42,13 @@ export function FloatingDockSection() {
             {
               title: lang === "en" ? t("language.spanish") : t("language.english"),
               icon: (
-                <img
+                <Image
                   src={lang === "en" ? "https://flagcdn.com/w40/es.png" : "https://flagcdn.com/w40/gb.png"}
                   className="size-full object-cover rounded-full"
                   alt={lang === "en" ? "ES Flag" : "UK Flag"}
+                  width={40}
+                  height={40}
+                  unoptimized
                 />
               ),
               href: "#",
