@@ -10,7 +10,7 @@ import { PortfolioData } from "@/lib/repositories/interfaces";
 
 
 export function FloatingDockSection() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const { lang, setLang, t } = useLanguage();
   const { navbar, contact } = usePortfolioData();
   const [mounted, setMounted] = useState(false);
