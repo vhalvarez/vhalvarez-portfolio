@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+docs/
+
+# testing artifacts
+test-results/
+playwright-report/
+
+# AI & metadata
+METADATA_GUIDE.md
+VERCEL_OPTIMIZATION_SUMMARY.md
+.gemini/

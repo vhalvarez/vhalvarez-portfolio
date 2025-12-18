@@ -1,0 +1,29 @@
+# Vercel Ignore
+# Files to exclude from deployment
+
+# Tests
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+vitest.config.ts
+
+# Documentation (keep in repo, exclude from deployment)
+DOCUMENTATION.md
+ARCHITECTURE.md
+COMPONENTS.md
+DEPLOYMENT.md
+VERCEL_OPTIMIZATION_SUMMARY.md
+
+# Development
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+*.log
