@@ -10,7 +10,7 @@ import { PortfolioData } from "@/lib/repositories/interfaces";
 
 
 export function FloatingDockSection() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const { lang, setLang, t } = useLanguage();
   const { navbar, contact } = usePortfolioData();
   const [mounted, setMounted] = useState(false);
@@ -55,12 +55,12 @@ export function FloatingDockSection() {
               onClick: () => setLang(lang === "en" ? "es" : "en"),
             },
             {
-              title: theme === "dark" ? t("theme.light") : t("theme.dark"),
-              icon: (mounted && theme === "dark")
+              title: resolvedTheme === "dark" ? t("theme.light") : t("theme.dark"),
+              icon: (mounted && resolvedTheme === "dark")
                 ? <Sun className="size-full text-neutral-500 dark:text-neutral-300" />
                 : <Moon className="size-full text-neutral-500 dark:text-neutral-300" />,
               href: "#",
-              onClick: () => setTheme(theme === "dark" ? "light" : "dark"),
+              onClick: () => setTheme(resolvedTheme === "dark" ? "light" : "dark"),
             }
           ]}
         />

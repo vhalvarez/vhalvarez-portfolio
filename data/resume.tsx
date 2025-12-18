@@ -155,7 +155,7 @@ export const DATA = {
             icon: <HomeIcon className="size-3" />,
           }
         ],
-        image: "/kitchen-app.png",
+        image: "/avatar/avatar.webp",
       },
       {
         title: "Enterprise Event Platform",
@@ -171,7 +171,7 @@ export const DATA = {
             icon: <Github className="size-3" />,
           }
         ],
-        image: "/event-platform.png",
+        image: "/avatar/avatar.webp",
       }
     ],
   },
