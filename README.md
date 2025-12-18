@@ -11,6 +11,7 @@ Modern, responsive portfolio website showcasing professional experience, project
 - **Resume Downloads** - PDF resumes available in both languages
 - **Project Showcase** - Grid layout with project cards and tech stack badges
 - **Graduation Gallery** - Photo viewer for education section
+- **Quality Assurance** - Comprehensive Unit Testing (Vitest) and End-to-End Testing (Playwright)
 
 ## Tech Stack
 
@@ -51,6 +52,8 @@ pnpm dev      # Start development server
 pnpm build    # Build for production
 pnpm start    # Start production server
 pnpm lint     # Run ESLint
+pnpm test     # Run Unit Tests (Vitest)
+pnpm test:e2e # Run E2E Tests (Playwright)
 ```
 
 ## Project Structure
