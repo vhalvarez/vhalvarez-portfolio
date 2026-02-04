@@ -151,7 +151,7 @@ export const DATA_EN = {
           icon: <Github className="size-3" />,
         }
       ],
-      image: "/projects/lunch-microservices.png",
+      image: "/projects/lunch.gif",
     },
     {
       title: "Wan Shi Tong - Library Platform",
