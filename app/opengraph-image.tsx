@@ -3,7 +3,7 @@ import { DATA } from '@/data/resume';
 
 export const runtime = 'edge';
 
-export const alt = `${DATA.en.name} - Full Stack Developer`;
+export const alt = `${DATA.en.name} - Full Stack Developer & Backend Architect | NestJS, React, AWS`;
 export const size = {
   width: 1200,
   height: 630,
@@ -43,7 +43,7 @@ export default async function Image() {
               fontSize: '72px',
               fontWeight: 'bold',
               color: '#fff',
-              margin: '0 0 20px 0',
+              margin: '0 0 10px 0',
               textAlign: 'center',
             }}
           >
@@ -51,32 +51,42 @@ export default async function Image() {
           </h1>
           <p
             style={{
-              fontSize: '36px',
-              color: '#aaa',
+              fontSize: '32px',
+              color: '#ddd',
+              margin: '0 0 10px 0',
+              textAlign: 'center',
+            }}
+          >
+            Full Stack Developer & Backend Architect
+          </p>
+          <p
+            style={{
+              fontSize: '24px',
+              color: '#999',
               margin: '0 0 40px 0',
               textAlign: 'center',
               maxWidth: '900px',
             }}
           >
-            {DATA.en.description}
+            Clean Architecture • DDD • CQRS • Microservices
           </p>
           <div
             style={{
               display: 'flex',
-              gap: '20px',
+              gap: '15px',
               flexWrap: 'wrap',
               justifyContent: 'center',
             }}
           >
-            {['React', 'Next.js', 'TypeScript', 'Node.js', 'NestJS', 'AWS'].map((tech) => (
+            {['TypeScript', 'NestJS', 'Fastify', 'React', 'Next.js', 'PostgreSQL', 'Docker', 'AWS'].map((tech) => (
               <div
                 key={tech}
                 style={{
-                  padding: '12px 24px',
+                  padding: '10px 20px',
                   backgroundColor: '#222',
                   color: '#fff',
                   borderRadius: '8px',
-                  fontSize: '24px',
+                  fontSize: '22px',
                   border: '1px solid #444',
                 }}
               >

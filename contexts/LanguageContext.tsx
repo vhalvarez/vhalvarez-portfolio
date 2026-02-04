@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, useMemo, useCallback, ReactNode } from "react";
 
 type Language = "en" | "es";
 
@@ -63,23 +63,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const savedLang = localStorage.getItem("portfolio-lang") as Language;
-    if (savedLang && (savedLang === "en" || savedLang === "es") && savedLang !== lang) {
-      // eslint-disable-next-line
+    if (savedLang && (savedLang === "en" || savedLang === "es")) {
       setLang(savedLang);
     }
-  }, [lang]);
+  }, []);
 
-  const handleSetLang = (newLang: Language) => {
+  const handleSetLang = useCallback((newLang: Language) => {
     setLang(newLang);
     localStorage.setItem("portfolio-lang", newLang);
-  };
+  }, []);
 
-  const t = (key: string): string => {
+  const t = useCallback((key: string): string => {
     return translations[lang][key as keyof typeof translations.en] || key;
-  };
+  }, [lang]);
+
+  const value = useMemo(
+    () => ({ lang, setLang: handleSetLang, t }),
+    [lang, handleSetLang, t]
+  );
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang: handleSetLang, t }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

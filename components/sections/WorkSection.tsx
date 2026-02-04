@@ -19,10 +19,10 @@ export function WorkSection() {
             <EncryptedText text={t("work.title")} />
           </h2>
         </BlurFade>
-        {work.map((item: PortfolioData["work"][number], id: number) => (
+        {work.map((item: PortfolioData["work"][number], index: number) => (
           <BlurFade
             key={item.company}
-            delay={AnimationConfig.work.getItemDelay(id)}
+            delay={AnimationConfig.work.getItemDelay(index)}
           >
             <ResumeCard
               logoUrl={item.logoUrl}

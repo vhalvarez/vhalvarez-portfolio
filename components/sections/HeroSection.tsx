@@ -44,7 +44,7 @@ export function HeroSection() {
 
             <BlurFade delay={AnimationConfig.hero.getSectionDelay()}>
               <a
-                href={lang === "en" ? "/resume_en.pdf" : "/resume_es.pdf"}
+                href={lang === "en" ? "/Victor_Alvarez_Resume.pdf" : "/Victor_Alvarez_CV.pdf"}
                 target="_blank"
                 className={cn(buttonVariants({ variant: "outline" }), "mt-4 gap-2")}
               >
@@ -58,7 +58,7 @@ export function HeroSection() {
             <Avatar className="size-32 border md:size-40">
               <AvatarImage
                 alt={data.name}
-                className="object-cover object-top scale-x-[-1.32] scale-y-[1.32]"
+                className="object-cover object-top scale-x-[-1.1] scale-y-[1.1]"
                 src={data.avatarUrl}
               />
               <AvatarFallback>{data.initials}</AvatarFallback>

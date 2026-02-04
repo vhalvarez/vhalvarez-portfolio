@@ -28,7 +28,17 @@ const nextConfig: NextConfig = {
 
   // Experimental features for better performance
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', '@tabler/icons-react'],
+    optimizePackageImports: [
+      'lucide-react',
+      '@tabler/icons-react',
+      '@radix-ui/react-icons',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-hover-card',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-tooltip',
+    ],
   },
 
   // Compiler options

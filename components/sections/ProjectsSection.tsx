@@ -30,10 +30,10 @@ export function ProjectsSection() {
           </div>
         </BlurFade>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-          {projects.map((project: PortfolioData["projects"][number], id: number) => (
+          {projects.map((project: PortfolioData["projects"][number], index: number) => (
             <BlurFade
               key={project.title}
-              delay={AnimationConfig.projects.getItemDelay(id)}
+              delay={AnimationConfig.projects.getItemDelay(index)}
             >
               <ProjectCard
                 href={project.href}

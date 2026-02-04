@@ -1,4 +1,5 @@
 "use client";
+import { memo } from "react";
 import BlurFade from "@/components/ui/blur-fade";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import Marquee from "@/components/ui/marquee";
@@ -7,7 +8,7 @@ import { usePortfolioData } from "@/hooks/usePortfolioData";
 import { AnimationConfig } from "@/lib/strategies/AnimationStrategy";
 import { SkillIconFactory } from "@/lib/factories/SkillIconFactory";
 
-export function SkillsSection() {
+export const SkillsSection = memo(function SkillsSection() {
   const { t } = useLanguage();
   const { skills } = usePortfolioData();
 
@@ -37,4 +38,4 @@ export function SkillsSection() {
       </div>
     </section>
   );
-}
+});

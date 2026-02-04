@@ -75,8 +75,8 @@ public/          # Static assets
 ├── avatar/      # Profile images
 ├── graduation/  # Education photos
 ├── logos/       # Company/tech logos
-├── resume_en.pdf
-└── resume_es.pdf
+├── Victor_Alvarez_Resume.pdf  # English resume
+└── Victor_Alvarez_CV.pdf      # Spanish CV
 ```
 
 ## Customization
@@ -122,6 +122,11 @@ The project can be deployed to any platform supporting Next.js:
 - AWS Amplify
 
 Build output: `pnpm build` creates optimized production build in `.next/`
+
+## Roadmap
+
+### Pending Features
+- [ ] **Project GIF Integration** - Add animated GIFs/demos to project showcase cards for better visual representation
 
 ## License
 

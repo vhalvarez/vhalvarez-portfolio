@@ -19,10 +19,10 @@ export function EducationSection() {
             <EncryptedText text={t("education.title")} />
           </h2>
         </BlurFade>
-        {education.map((item: PortfolioData["education"][number], id: number) => (
+        {education.map((item: PortfolioData["education"][number], index: number) => (
           <BlurFade
             key={item.school}
-            delay={AnimationConfig.education.getItemDelay(id)}
+            delay={AnimationConfig.education.getItemDelay(index)}
           >
             <ResumeCard
               href={item.href}

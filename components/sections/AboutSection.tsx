@@ -1,11 +1,12 @@
 "use client";
+import { memo } from "react";
 import BlurFade from "@/components/ui/blur-fade";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
 import { AnimationConfig } from "@/lib/strategies/AnimationStrategy";
 
-export function AboutSection() {
+export const AboutSection = memo(function AboutSection() {
   const { t } = useLanguage();
   const { data } = usePortfolioData();
 
@@ -23,4 +24,4 @@ export function AboutSection() {
       </BlurFade>
     </section>
   );
-}
+});

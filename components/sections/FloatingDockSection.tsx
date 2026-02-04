@@ -3,7 +3,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import Image from "next/image";
 import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
 import { PortfolioData } from "@/lib/repositories/interfaces";
@@ -20,11 +20,7 @@ export function FloatingDockSection() {
     setMounted(true);
   }, []);
 
-  return (
-    <div className="fixed inset-x-0 bottom-4 z-50 mx-auto w-full max-w-full flex justify-center pointer-events-none">
-      <div className="pointer-events-auto">
-        <FloatingDock
-          items={[
+  const items = useMemo(() => [
             ...navbar.map((item: PortfolioData["navbar"][number]) => ({
               title: item.label,
               icon: <item.icon className="size-full text-neutral-500 dark:text-neutral-300" />,
@@ -48,7 +44,6 @@ export function FloatingDockSection() {
                   alt={lang === "en" ? "ES Flag" : "UK Flag"}
                   width={40}
                   height={40}
-                  unoptimized
                 />
               ),
               href: "#",
@@ -68,8 +63,16 @@ export function FloatingDockSection() {
                 setTheme(resolvedTheme === "dark" ? "light" : "dark");
               },
             }
-          ]}
-        />
+  ], [navbar, contact, lang, resolvedTheme, mounted, t, setLang, setTheme]);
+
+  if (!mounted) {
+    return null;
+  }
+
+  return (
+    <div className="fixed inset-x-0 bottom-4 z-50 mx-auto w-full max-w-full flex justify-center pointer-events-none">
+      <div className="pointer-events-auto">
+        <FloatingDock items={items} />
       </div>
     </div>
   );

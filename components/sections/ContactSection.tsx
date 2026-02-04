@@ -1,4 +1,5 @@
 "use client";
+import { memo } from "react";
 import BlurFade from "@/components/ui/blur-fade";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 import { LinkPreview } from "@/components/ui/link-preview";
@@ -6,7 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { DATA } from "@/data/resume";
 import { AnimationConfig } from "@/lib/strategies/AnimationStrategy";
 
-export function ContactSection() {
+export const ContactSection = memo(function ContactSection() {
   const { t } = useLanguage();
 
   return (
@@ -37,4 +38,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-}
+});

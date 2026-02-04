@@ -13,7 +13,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from "framer-motion";
+} from "motion/react";
 import Link from "next/link";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { useRef, useState } from "react";

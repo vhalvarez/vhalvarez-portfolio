@@ -33,6 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="dns-prefetch" href="https://flagcdn.com" />
+        <link rel="dns-prefetch" href="https://cdn.simpleicons.org" />
+        <link rel="preconnect" href="https://flagcdn.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.simpleicons.org" crossOrigin="anonymous" />
         <PlausibleProvider domain="vhalvarez.com" />
         <script
           type="application/ld+json"
@@ -49,6 +53,16 @@ export default function RootLayout({
           dangerouslySetInnerHTML={getStructuredData("professionalService")}
           key="service-jsonld"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={getStructuredData("profilePage")}
+          key="profile-jsonld"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={getStructuredData("workExperience")}
+          key="work-jsonld"
+        />
       </head>
       <body
         className={cn(
@@ -57,7 +71,7 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <LanguageProvider>
             <MouseFollower />
             <div className="max-w-2xl mx-auto py-4 sm:py-10 px-6">
