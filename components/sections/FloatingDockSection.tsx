@@ -47,7 +47,7 @@ export function FloatingDockSection() {
                 />
               ),
               href: "#",
-              onClick: (e) => {
+              onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
                 e.preventDefault();
                 setLang(lang === "en" ? "es" : "en");
               },
@@ -58,7 +58,7 @@ export function FloatingDockSection() {
                 ? <Sun className="size-full text-neutral-500 dark:text-neutral-300" />
                 : <Moon className="size-full text-neutral-500 dark:text-neutral-300" />,
               href: "#",
-              onClick: (e) => {
+              onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
                 e.preventDefault();
                 setTheme(resolvedTheme === "dark" ? "light" : "dark");
               },
