@@ -177,7 +177,7 @@ export const DATA_EN = {
       description: "Built national PKI infrastructure system for digital certificate publication and validation. Implemented OCSP server for real-time certificate validation, API with JWT authentication and rate limiting (60-200 req/min), and complete testing suite achieving 100% pass rate in CI/CD.",
       technologies: ["Next.js 14", "PostgreSQL", "HashiCorp Vault", "OCSP", "NGINX", "Docker", "Jest", "Playwright", "JWT"],
       links: [],
-      image: "/projects/publicador-fiiidt.png",
+      image: "/projects/publicador-pki.gif",
     },
     {
       title: "Nexus Enterprise Platform",
@@ -187,7 +187,7 @@ export const DATA_EN = {
       description: "Architected enterprise microservices platform with Clean Architecture, DDD, and CQRS patterns. Built 4 production microservices (API Gateway, Auth, Users, Reports) with NestJS communicating via NATS. Implemented asynchronous report generation with Bull queues and comprehensive domain events system.",
       technologies: ["NestJS", "Next.js 15", "PostgreSQL", "Redis", "NATS", "Bull", "Docker", "CQRS", "DDD", "Clean Architecture"],
       links: [],
-      image: "/projects/nexus-v2.png",
+      image: "/projects/nexus.gif",
     }
   ],
 } as const;

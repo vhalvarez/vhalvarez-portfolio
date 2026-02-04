@@ -177,7 +177,7 @@ export const DATA_ES = {
       description: "Construí sistema de infraestructura PKI nacional para publicación y validación de certificados digitales. Implementé servidor OCSP para validación en tiempo real de certificados, API con autenticación JWT y rate limiting (60-200 req/min), y suite completa de testing logrando 100% de tests pasando en CI/CD.",
       technologies: ["Next.js 14", "PostgreSQL", "HashiCorp Vault", "OCSP", "NGINX", "Docker", "Jest", "Playwright", "JWT"],
       links: [],
-      image: "/projects/publicador-fiiidt.png",
+      image: "/projects/publicador-pki.gif",
     },
     {
       title: "Plataforma Empresarial Nexus",
@@ -187,7 +187,7 @@ export const DATA_ES = {
       description: "Arquitecté plataforma de microservicios empresarial con Clean Architecture, DDD y patrones CQRS. Construí 4 microservicios en producción (API Gateway, Auth, Users, Reports) con NestJS comunicándose vía NATS. Implementé generación asíncrona de reportes con colas Bull y sistema completo de domain events.",
       technologies: ["NestJS", "Next.js 15", "PostgreSQL", "Redis", "NATS", "Bull", "Docker", "CQRS", "DDD", "Clean Architecture"],
       links: [],
-      image: "/projects/nexus-v2.png",
+      image: "/projects/nexus.gif",
     }
   ],
 } as const;
