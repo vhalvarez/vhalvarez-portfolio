@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { LinkPreview } from "@/components/ui/link-preview";
 import {
@@ -8,9 +9,9 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { Code } from "lucide-react";
 
 interface Props {
     title: string;
@@ -41,6 +42,8 @@ export function ProjectCard({
     links,
     className,
 }: Props) {
+    const [imageError, setImageError] = useState(false);
+
     return (
         <Card
             className={cn(
@@ -64,15 +67,21 @@ export function ProjectCard({
                         className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // adjust height as needed
                     />
                 )}
-                {image && (
-                    <Image
+                {image && !imageError ? (
+                    <img
                         src={image}
                         alt={title}
                         width={500}
                         height={300}
                         className="h-40 w-full overflow-hidden object-cover object-top"
+                        onError={() => setImageError(true)}
+                        loading="lazy"
                     />
-                )}
+                ) : image && imageError ? (
+                    <div className="h-40 w-full bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
+                        <Code className="size-16 text-muted-foreground/40" />
+                    </div>
+                ) : null}
             </Link>
             <CardHeader className="px-2">
                 <div className="space-y-1">

@@ -100,14 +100,14 @@ export const enhancedMetadata: Metadata = {
     alternateLocale: ["es_ES"],
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Full Stack Developer`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} | Full Stack Developer & Backend Architect`,
+    description: "4+ years building scalable microservices with Clean Architecture, DDD & CQRS. Expert in TypeScript, NestJS, React, AWS. Proven track record supporting 100K+ daily users. Available for remote opportunities worldwide.",
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Full Stack Developer Portfolio`,
+        alt: `${siteConfig.name} - Full Stack Developer & Backend Architect | 4+ Years Experience`,
         type: "image/png",
       },
     ],
@@ -115,8 +115,8 @@ export const enhancedMetadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Full Stack Developer`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} | Full Stack Developer & Backend Architect`,
+    description: "4+ years building scalable microservices with Clean Architecture, DDD & CQRS. Expert in TypeScript, NestJS, React, AWS. Available for remote opportunities.",
     creator: siteConfig.twitterHandle,
     site: siteConfig.twitterHandle,
     images: [siteConfig.ogImage],

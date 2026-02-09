@@ -1,4 +1,4 @@
-import { Network, Layers, Boxes } from "lucide-react";
+import { Network, Layers, Boxes, Rabbit, GitBranch, TestTube2, Database, FileText } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 
@@ -49,20 +49,45 @@ class SimpleIconAdapter implements IconAdapter {
 
 export class SkillIconFactory {
   private static readonly iconMap: Record<string, IconAdapter> = {
+    // Architecture & Patterns
     "microservices": new LucideIconAdapter(Network),
     "microservicios": new LucideIconAdapter(Network),
     "clean architecture": new LucideIconAdapter(Layers),
     "arquitectura limpia": new LucideIconAdapter(Layers),
     "design patterns": new LucideIconAdapter(Boxes),
     "patrones de diseño": new LucideIconAdapter(Boxes),
+    "ddd": new LucideIconAdapter(Database),
+    "cqrs": new LucideIconAdapter(GitBranch),
+    
+    // Testing & Dev Tools
+    "playwright": new LucideIconAdapter(TestTube2),
+    "pino": new LucideIconAdapter(FileText),
+    "bull": new LucideIconAdapter(Rabbit),
+    
+    // Local logos
     "redis": new LocalImageIconAdapter("/logos/redis.svg", "Redis"),
     "aws": new LocalImageIconAdapter("/logos/aws.svg", "AWS"),
   };
 
   private static readonly slugMap: Record<string, string> = {
+    // Programming Languages
     "c++": "cplusplus",
     "c#": "csharp",
+    
+    // Cloud & Infrastructure
+    "hashicorp vault": "vault",
+    "github actions": "githubactions",
+    
+    // Message Queues & Streaming
     "nats": "natsdotio",
+    
+    // Storage & Databases
+    "minio": "minio",
+    
+    // Observability
+    "opentelemetry": "opentelemetry",
+    
+    // GraphQL & APIs
     "apollo": "apollographql",
     "vercel ai sdk": "vercel",
   };

@@ -24,21 +24,21 @@ export function HeroSection() {
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none inline-block mb-1"
                 encryptedClassName="text-muted-foreground"
                 revealedClassName="text-foreground"
-                revealDelayMs={70}
+                revealDelayMs={15}
               />
             </BlurFade>
 
             <EncryptedText
               className="max-w-[600px] md:text-xl text-muted-foreground"
               text={data.description}
-              revealDelayMs={50}
+              revealDelayMs={12}
             />
 
             <div className="flex items-center gap-2 mt-2">
               <EncryptedText
                 className="text-sm md:text-base text-muted-foreground"
                 text={`${data.location} • ${t("hero.location")}`}
-                revealDelayMs={60}
+                revealDelayMs={15}
               />
             </div>
 

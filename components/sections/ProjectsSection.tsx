@@ -24,7 +24,7 @@ export function ProjectsSection() {
                 <EncryptedText text={t("projects.subtitle")} />
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                <EncryptedText text={t("projects.description")} revealDelayMs={30} />
+                <EncryptedText text={t("projects.description")} revealDelayMs={10} />
               </p>
             </div>
           </div>

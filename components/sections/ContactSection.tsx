@@ -6,9 +6,23 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { DATA } from "@/data/resume";
 import { AnimationConfig } from "@/lib/strategies/AnimationStrategy";
+import { Linkedin, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const ContactSection = memo(function ContactSection() {
   const { t } = useLanguage();
+
+  const shareOnLinkedIn = () => {
+    const url = encodeURIComponent(DATA.en.url);
+    const title = encodeURIComponent(`${DATA.en.name} - Full Stack Developer & Backend Architect`);
+    const summary = encodeURIComponent("Check out this impressive portfolio showcasing 4+ years of experience building scalable microservices with Clean Architecture, DDD & CQRS!");
+    
+    window.open(
+      `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+      '_blank',
+      'width=600,height=600'
+    );
+  };
 
   return (
     <section id="contact">
@@ -32,6 +46,34 @@ export const ContactSection = memo(function ContactSection() {
                 </LinkPreview>
                 <EncryptedText text="." revealDelayMs={30} />
               </span>
+            </div>
+            
+            {/* LinkedIn Share Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-4">
+              <Button
+                onClick={shareOnLinkedIn}
+                className="gap-2 bg-[#0077B5] hover:bg-[#006399] text-white"
+                size="lg"
+              >
+                <Share2 className="size-4" />
+                {t("contact.shareLinkedIn") || "Share on LinkedIn"}
+              </Button>
+              
+              <Button
+                asChild
+                variant="outline"
+                className="gap-2"
+                size="lg"
+              >
+                <a
+                  href={DATA.en.contact.social.LinkedIn.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="size-4" />
+                  {t("contact.connectLinkedIn") || "Connect on LinkedIn"}
+                </a>
+              </Button>
             </div>
           </div>
         </BlurFade>
