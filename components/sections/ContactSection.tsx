@@ -14,9 +14,7 @@ export const ContactSection = memo(function ContactSection() {
 
   const shareOnLinkedIn = () => {
     const url = encodeURIComponent(DATA.en.url);
-    const title = encodeURIComponent(`${DATA.en.name} - Full Stack Developer & Backend Architect`);
-    const summary = encodeURIComponent("Check out this impressive portfolio showcasing 4+ years of experience building scalable microservices with Clean Architecture, DDD & CQRS!");
-    
+
     window.open(
       `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
       '_blank',

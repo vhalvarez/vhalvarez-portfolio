@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState, useEffect, useMemo, useCallback, ReactNode } from "react";
+import { createContext, useContext, useState, useMemo, useCallback, ReactNode } from "react";
 
 type Language = "en" | "es";
 
@@ -62,15 +62,14 @@ const translations = {
   }
 };
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>("en");
+function getInitialLanguage(): Language {
+  if (typeof window === "undefined") return "en";
+  const savedLang = localStorage.getItem("portfolio-lang") as Language;
+  return savedLang === "en" || savedLang === "es" ? savedLang : "en";
+}
 
-  useEffect(() => {
-    const savedLang = localStorage.getItem("portfolio-lang") as Language;
-    if (savedLang && (savedLang === "en" || savedLang === "es")) {
-      setLang(savedLang);
-    }
-  }, []);
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [lang, setLang] = useState<Language>(getInitialLanguage);
 
   const handleSetLang = useCallback((newLang: Language) => {
     setLang(newLang);
