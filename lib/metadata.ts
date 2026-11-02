@@ -5,13 +5,15 @@ const siteConfig = {
   name: DATA.en.name,
   description: DATA.en.description,
   url: DATA.en.url,
-  ogImage: `${DATA.en.url}/og-image.png`,
+  ogImage: `${DATA.en.url}/opengraph-image`,
   twitterHandle: "@vhalvarez",
   keywords: [
     "Victor Alvarez",
     "Full Stack Developer",
     "Software Engineer",
-    "Backend Architect",
+    "Senior Product Engineer",
+    "Avila Tek",
+    "AI-assisted Development",
     "React Developer",
     "Next.js Developer",
     "TypeScript Developer",
@@ -29,7 +31,6 @@ const siteConfig = {
     "Cloud Solutions",
     "AWS Developer",
     "Docker Specialist",
-    "Kubernetes",
     "PostgreSQL Expert",
     "Redis",
     "RabbitMQ",
@@ -60,7 +61,7 @@ const siteConfig = {
     "Enterprise Software",
     "Scalable Systems",
     "High Performance",
-    "4+ years experience",
+    "Product Engineering",
   ],
   authors: [
     {
@@ -76,11 +77,11 @@ export const enhancedMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
   title: {
-    default: `${siteConfig.name} | Full Stack Developer & Backend Architect | NestJS, React, AWS`,
+    default: `${siteConfig.name} | Senior Product Engineer en Avila Tek`,
     template: `%s | ${siteConfig.name}`,
   },
 
-  description: "Full Stack Software Engineer with 4+ years of experience building scalable enterprise microservices using Clean Architecture, DDD, CQRS. Expert in TypeScript, NestJS, React, Next.js, PostgreSQL, AWS. Proven track record supporting 1,000-100,000 daily users. Open to remote opportunities.",
+  description: siteConfig.description,
 
   keywords: siteConfig.keywords,
 
@@ -100,14 +101,14 @@ export const enhancedMetadata: Metadata = {
     alternateLocale: ["es_ES"],
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Full Stack Developer & Backend Architect`,
-    description: "4+ years building scalable microservices with Clean Architecture, DDD & CQRS. Expert in TypeScript, NestJS, React, AWS. Proven track record supporting 100K+ daily users. Available for remote opportunities worldwide.",
+    title: `${siteConfig.name} | Senior Product Engineer at Avila Tek`,
+    description: siteConfig.description,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Full Stack Developer & Backend Architect | 4+ Years Experience`,
+        alt: `${siteConfig.name} - Senior Product Engineer at Avila Tek`,
         type: "image/png",
       },
     ],
@@ -115,8 +116,8 @@ export const enhancedMetadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Full Stack Developer & Backend Architect`,
-    description: "4+ years building scalable microservices with Clean Architecture, DDD & CQRS. Expert in TypeScript, NestJS, React, AWS. Available for remote opportunities.",
+    title: `${siteConfig.name} | Senior Product Engineer at Avila Tek`,
+    description: siteConfig.description,
     creator: siteConfig.twitterHandle,
     site: siteConfig.twitterHandle,
     images: [siteConfig.ogImage],
@@ -179,15 +180,16 @@ export const structuredData = {
     "@type": "Person",
     name: DATA.en.name,
     url: DATA.en.url,
-    image: `${DATA.en.url}/avatar/avatar.png`,
+    image: `${DATA.en.url}${DATA.en.avatarUrl}`,
     sameAs: [
       DATA.en.contact.social.GitHub.url,
       DATA.en.contact.social.LinkedIn.url,
     ],
-    jobTitle: "Full Stack Developer",
+    jobTitle: "Senior Product Engineer",
     worksFor: {
       "@type": "Organization",
-      name: "FIIIDT",
+      name: "Avila Tek",
+      url: "https://github.com/Avila-Tek",
     },
     address: {
       "@type": "PostalAddress",
@@ -215,7 +217,6 @@ export const structuredData = {
       "Cloud Computing",
       "AWS",
       "Docker",
-      "Kubernetes",
       "PostgreSQL",
       "Redis",
       "RabbitMQ",
@@ -223,21 +224,13 @@ export const structuredData = {
       "PKI Infrastructure",
       "HashiCorp Vault",
     ],
-    description: "Full Stack Software Engineer with 4+ years of experience building scalable enterprise systems and microservices architectures. Specialized in Clean Architecture, Domain-Driven Design, CQRS patterns, and AI integration.",
+    description: DATA.en.summary,
     hasOccupation: {
       "@type": "Occupation",
-      name: "Software Engineer - Backend Architect",
+      name: "Senior Product Engineer",
       occupationLocation: {
         "@type": "Country",
         name: "Venezuela",
-      },
-      estimatedSalary: {
-        "@type": "MonetaryAmountDistribution",
-        name: "base",
-        currency: "USD",
-        percentile10: 40000,
-        percentile25: 60000,
-        median: 80000,
       },
     },
   },
@@ -264,7 +257,7 @@ export const structuredData = {
     priceRange: "$$",
     areaServed: "Worldwide",
     availableLanguage: ["English", "Spanish"],
-    slogan: "Building scalable solutions with Clean Architecture",
+    slogan: "Building digital products from prototype to production",
   },
 
   breadcrumb: {
@@ -286,8 +279,8 @@ export const structuredData = {
     mainEntity: {
       "@type": "Person",
       name: DATA.en.name,
-      description: "Full Stack Software Engineer with 4+ years of experience",
-      image: `${DATA.en.url}/avatar/avatar.png`,
+      description: DATA.en.description,
+      image: `${DATA.en.url}${DATA.en.avatarUrl}`,
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -308,7 +301,29 @@ export const structuredData = {
     itemListElement: [
       {
         "@type": "OrganizationRole",
-        roleName: "Software Engineer - Backend Architect",
+        roleName: "Senior Product Engineer",
+        startDate: "2026-10",
+        organization: {
+          "@type": "Organization",
+          name: "Avila Tek",
+          url: "https://github.com/Avila-Tek",
+        },
+        description: "Build end-to-end product features with frontend, backend, and integrations, supported by AI-assisted development and technical validation.",
+      },
+      {
+        "@type": "OrganizationRole",
+        roleName: "Full Stack Developer",
+        startDate: "2026-03",
+        endDate: "2026-10",
+        organization: {
+          "@type": "Organization",
+          name: "KS2, C.A.",
+        },
+        description: "Provided technical leadership for public-sector platforms, designed multi-service architecture, and integrated banking payment gateways and asynchronous processing.",
+      },
+      {
+        "@type": "OrganizationRole",
+        roleName: "Full Stack Developer",
         startDate: "2024-06",
         endDate: "2026-01",
         organization: {
@@ -316,11 +331,11 @@ export const structuredData = {
           name: "FIIIDT",
           url: "http://www.fii.gob.ve",
         },
-        description: "Architected microservices platform supporting 1,000-100,000 daily users using Clean Architecture, DDD, and CQRS",
+        description: "Designed eight production microservices with NestJS, Clean Architecture, DDD, and CQRS, supporting more than 10,000 daily users.",
       },
       {
         "@type": "OrganizationRole",
-        roleName: "Backend Developer & BI Specialist",
+        roleName: "BI Specialist",
         startDate: "2018-11",
         endDate: "2021-07",
         organization: {
@@ -328,7 +343,7 @@ export const structuredData = {
           name: "Bancamiga",
           url: "https://bancamiga.com",
         },
-        description: "Migrated legacy Excel models to Laravel RESTful APIs with interactive Vue.js dashboards",
+        description: "Built PHP reporting tools and JavaScript dashboards, optimizing SQL queries to reduce report generation from four hours to 15 minutes.",
       },
     ],
   },

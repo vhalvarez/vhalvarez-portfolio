@@ -63,6 +63,11 @@ export class SkillIconFactory {
     "playwright": new LucideIconAdapter(TestTube2),
     "pino": new LucideIconAdapter(FileText),
     "bull": new LucideIconAdapter(Rabbit),
+    "bullmq": new LucideIconAdapter(Rabbit),
+    "claude code": new LucideIconAdapter(FileText),
+    "codex": new LucideIconAdapter(FileText),
+    "typeorm": new LucideIconAdapter(Database),
+    "oracle": new LucideIconAdapter(Database),
     
     // Local logos
     "redis": new LocalImageIconAdapter("/logos/redis.svg", "Redis"),
@@ -77,6 +82,7 @@ export class SkillIconFactory {
     // Cloud & Infrastructure
     "hashicorp vault": "vault",
     "github actions": "githubactions",
+    "gitlab ci/cd": "gitlab",
     
     // Message Queues & Streaming
     "nats": "natsdotio",

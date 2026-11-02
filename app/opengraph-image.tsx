@@ -3,7 +3,7 @@ import { DATA } from '@/data/resume';
 
 export const runtime = 'edge';
 
-export const alt = `${DATA.en.name} - Full Stack Developer & Backend Architect | NestJS, React, AWS | 4+ Years Experience`;
+export const alt = `${DATA.es.name} - Senior Product Engineer en Avila Tek`;
 export const size = {
   width: 1200,
   height: 630,
@@ -57,7 +57,7 @@ export default async function Image() {
               width: 'fit-content',
             }}
           >
-            🚀 Available for Remote Opportunities
+            Construyendo productos en Avila Tek
           </div>
           
           <h1
@@ -81,7 +81,7 @@ export default async function Image() {
               fontWeight: '600',
             }}
           >
-            Full Stack Developer & Backend Architect
+            Senior Product Engineer
           </p>
           
           <p
@@ -93,23 +93,23 @@ export default async function Image() {
               lineHeight: '1.4',
             }}
           >
-            Specialized in Clean Architecture, DDD & CQRS patterns
+            Del prototipo a producción con TypeScript e IA
           </p>
         </div>
 
         {/* Stats section */}
         <div style={{ display: 'flex', gap: '40px', zIndex: 1 }}>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: '42px', fontWeight: 'bold', color: '#60a5fa' }}>4+</div>
-            <div style={{ fontSize: '18px', color: '#a3a3a3' }}>Years Exp</div>
+            <div style={{ fontSize: '42px', fontWeight: 'bold', color: '#60a5fa' }}>Full stack</div>
+            <div style={{ fontSize: '18px', color: '#a3a3a3' }}>Desarrollo de producto</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: '42px', fontWeight: 'bold', color: '#60a5fa' }}>8</div>
-            <div style={{ fontSize: '18px', color: '#a3a3a3' }}>Microservices</div>
+            <div style={{ fontSize: '42px', fontWeight: 'bold', color: '#60a5fa' }}>Backend</div>
+            <div style={{ fontSize: '18px', color: '#a3a3a3' }}>Arquitectura e integraciones</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: '42px', fontWeight: 'bold', color: '#60a5fa' }}>100K+</div>
-            <div style={{ fontSize: '18px', color: '#a3a3a3' }}>Daily Users</div>
+            <div style={{ fontSize: '42px', fontWeight: 'bold', color: '#60a5fa' }}>IA</div>
+            <div style={{ fontSize: '18px', color: '#a3a3a3' }}>Aplicada al desarrollo</div>
           </div>
         </div>
 
